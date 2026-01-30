@@ -10,7 +10,13 @@ allLinks.forEach(link => {
         const id = link.getAttribute('href').substring(1)
         const section = document.getElementById(id)
 
-        section ? seamless.scrollIntoView(section , {behavior: 'smooth', block: 'center', inline: 'center'}) : ''
+        if (section) {
+            seamless.scrollIntoView(section, {
+                behavior: "smooth",
+                block: "center",
+                inline: "center",
+            });
+        }
     })
 })
 
